@@ -1,2 +1,2 @@
 # gradle-tutorial
-Gradle examples for learning the basiscs
+Gradle examples for learning the basics
