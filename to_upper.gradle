@@ -1,0 +1,9 @@
+task upper {
+    doLast {
+        String someString = 'mY_nAmE'
+        println "Original: $someString"
+        println "Upper case: ${someString.toUpperCase()}"
+    }
+}
+
+// gradle -b to_upper.gradle  -q upper
