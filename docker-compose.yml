@@ -1,0 +1,21 @@
+version: '3'
+services:
+ jenkins-docker:
+   image: jenkins/jenkins
+   restart: always
+   volumes:
+   - ./jenkins_home:/var/jenkins_home
+   ports:
+   - 8080:8080
+   - 5000:5000
+ gitlab-docker:
+   image: gitlab/gitlab-ce:latest
+   restart: always
+   volumes:
+   - /srv/gitlab/config:/etc/gitlab
+   - /srv/gitlab/logs:/var/log/gitlab
+   - /srv/gitlab/data:/var/opt/gitlab
+   ports:
+   - 8000:80
+   - 222:22 
+
